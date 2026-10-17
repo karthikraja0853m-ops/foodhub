@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub - Best Cashback App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>🍔 FoodHub All-In-One</h1>
+        <p>Compare Swiggy vs Zomato | Get Cashback & Quick Delivery</p>
+    </div>
+
+    <div class="search-section">
+        <input type="text" id="dishInput" placeholder="Enter dish (eg: Biryani, Pizza)...">
+        <button onclick="checkLiveDeals()">Find Fastest & Cheapest</button>
+    </div>
+
+    <div class="results-layout" id="dealsContainer" style="display: none;">
+        <!-- Card Zomato -->
+        <div class="card zomato-card">
+            <h3>Zomato Live Deals</h3>
+            <p>Delivery: <strong style="color: #2ed573;">20 Mins (Fastest)</strong></p>
+            <p>Price: ₹240</p>
+            <div class="badge">🎁 ₹30 Instant Cashback</div>
+            <a href="https://zomato.com" target="_blank" class="btn" onclick="addRewardMoney(30)">Order via Zomato</a>
+        </div>
+
+        <!-- Card Swiggy -->
+        <div class="card swiggy-card">
+            <h3>Swiggy Live Deals</h3>
+            <p>Delivery: 32 Mins</p>
+            <p>Price: <strong style="color: #ff4757;">₹210 (Cheapest)</strong></p>
+            <div class="badge">🎁 ₹25 Instant Cashback</div>
+            <a href="https://swiggy.com" target="_blank" class="btn" onclick="addRewardMoney(25)">Order via Swiggy</a>
+        </div>
+    </div>
+
+    <div class="wallet">
+        <h3>💰 Your Earned Cashbacks: <span id="cashbackBalance">₹0</span></h3>
+        <p>Minimum withdrawal limit to your UPI: ₹100</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
